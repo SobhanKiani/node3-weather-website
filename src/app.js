@@ -50,7 +50,7 @@ app.get('/help',(req,res)=>{
 
 app.get("/weather",(req,res)=>{
     if(req.query.address){
-        geocode("Boston",(error,{location,longitude,latitude}={})=>{
+        geocode(req.query.address,(error,{location,longitude,latitude}={})=>{
             if(error){
                 return res.send({
                     error:error
