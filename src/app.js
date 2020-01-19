@@ -75,7 +75,7 @@ app.get("/weather",(req,res)=>{
         return res.send({
             error:'Address should be provided'
         })
-    }
+    } 
 })
 
 
